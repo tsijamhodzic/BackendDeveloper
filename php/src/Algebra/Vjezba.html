@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    table, th, td {
+        border:1px solid black;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Zadatak</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><label for="fname">Ime:</label></td>
+        <td><input type="text" id="fname" name="fname"></td>
+    </tr>
+    <tr>
+        <td><label for="lname">Prezime:</label></td>
+        <td><input type="text" id="lname" name="lname"></td>
+    </tr>
+    <tr>
+        <td><label for="email">Email:</label></td>
+        <td><input type="text" id="email" name="email"></td>
+    </tr>
+    <tr>
+        <td><label for="Country">Država:</label></td>
+        <td>
+            <select id="Country" name="Country">
+                <option value="" selected disabled></option>
+                <option value="CRO">Hrvatska</option>
+                <option value="GER">Njemačka</option>
+                <option value="ENG">Engleska</option>
+            </select></td>
+    </tr>
+    <tr>
+        <td>Spol:</td>
+        <td><INPUT TYPE="Radio" Name="Gender" ID="R1" Value="Male">
+            <LABEL FOR="R1">Muško</LABEL>
+            <INPUT TYPE="Radio" Name="Gender" ID="R2" Value="Female">
+            <LABEL FOR="R2">Žensko</LABEL>
+        </td>
+
+    </tr>
+    <tr>
+        <td>Zanima me:</td>
+        <td><INPUT TYPE="Radio" Name="interested" ID="R3" Value="swimm">
+            <LABEL FOR="R3">Plivanje</LABEL>
+            <INPUT TYPE="Radio" Name="interested" ID="R4" Value="climb">
+            <LABEL FOR="R4">Penjanje</LABEL>
+            <INPUT TYPE="Radio" Name="interested" ID="R5" Value="program">
+            <LABEL FOR="R5">Programiranje</LABEL>
+        </td>
+    </tr>
+    <tr>
+        <td><button type="button">Pošalji!</button></td>
+    </tr>
+</table>
+</body>
+</html>
