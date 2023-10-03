@@ -57,4 +57,12 @@ $users[2] = [
     'godine' => 28,
     ];
 
-var_dump($users);
+//var_dump($users);
+
+foreach ($users as $index => $user) {
+    echo "$index user<br>";
+    echo "-------------------<br><br>";
+    foreach ($user as $key => $attribute) {
+        echo "$key : $attribute<br>";
+    }
+}
