@@ -23,3 +23,38 @@ echo "<br><br>";
 arsort($primeNumbers);
 
 echo implode(', ' , $primeNumbers);
+
+echo "<br><br>";
+
+$users = [
+    0 => [
+        'ime' => 'Marko',
+        'prezime' => 'Markić',
+        'godine' => 28,
+        'spol' => 'Muško'
+    ],
+    1 => [
+        'ime' => 'Marija',
+        'prezime' => 'Marić',
+        'godine' => 32,
+        'spol' => 'Žensko'
+    ],
+];
+
+var_dump($users);
+
+echo "<br><br>";
+
+unset($users[0]['spol'] , $users[1]['spol']);
+
+var_dump($users);
+
+echo "<br><br>";
+
+$users[2] = [
+    'ime' => 'Marko',
+    'prezime' => 'Markić',
+    'godine' => 28,
+    ];
+
+var_dump($users);
