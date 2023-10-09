@@ -14,7 +14,7 @@ echo "<br><br>";
 function getFullName(string $name, string $surname): string
 {
     $fullName = "$name " . " $surname";
-    return $fullName;
+    return strtoupper($fullName);
 }
 
-echo getFullName("Tin", "Sijamhodžić");
+echo $solution = getFullName("Tin", "Sijamhodžić");
