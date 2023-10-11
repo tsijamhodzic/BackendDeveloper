@@ -18,3 +18,20 @@ function getFullName(string $name, string $surname): string
 }
 
 echo $solution = getFullName("Tin", "Sijamhodžić");
+
+echo "<br><br>";
+
+function randomNumberGenerator($number)
+{
+    static $result = 2;
+    $result = $number + $result;
+    echo $result . "<br>";
+}
+
+$func = 'randomNumberGenerator';
+
+$func(rand(1, 10));
+$func(rand(1, 10));
+$func(rand(1, 10));
+$func(rand(1, 10));
+$func(rand(1, 10));
