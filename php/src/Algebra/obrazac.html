@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="obrada.php" method="post">
+
+    <label> Ime</label>
+    <input name="Name" ><label style="color: red">*</label><br><br>
+
+    <label> Prezime</label>
+    <input name="LastName" ><label style="color: red">*</label><br><br>
+
+    <input type="submit" value="Pošalji">
+</form>
+
+
+<?php if(!empty($name)): ?>
+<p>Ime: <? echo $name; ?></p>
+<? endif; ?>
+
+
+<?php if(!empty($lastName)): ?>
+<p>Prezime: <? echo $lastName; ?></p>
+<? endif; ?>
+
+<?php if (!empty($errorMessage)): ?>
+<p><? echo $errorMessage ?></p>
+<? endif; ?>
+
+</body>
+</html>
