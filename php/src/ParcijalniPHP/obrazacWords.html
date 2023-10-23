@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Obrazac</title>
+    <style>
+        .form-container {
+            display: flex;
+        }
+
+        .form-input {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <div class="form-input">
+        <form action="obrazacController.php" method="post">
+
+            <label> Upišite riječ </label>
+            <input name="Word"><label style="color: red">*</label><br><br>
+
+            <input type="submit" value="Pošalji">
+        </form>
+
+        <?php if (!empty($errorMessage)): ?>
+        <p><? echo $errorMessage ?></p>
+        <? endif; ?>
+    </div>
+
+    <table border="1">
+        <tr>
+            <th>Riječ</th>
+            <th>Broj slova</th>
+            <th>Broj suglasnika</th>
+            <th>Broj samoglasnika</th>
+        </tr>
+        <?php
+    $wordsJson = file_get_contents('words.json');
+    $words = json_decode($wordsJson, true);
+
+    if (!empty($words)) {
+        foreach ($words as $word) {
+            echo "<tr>";
+        echo "
+        <td>" . $word['rijec'] . "</td>
+        ";
+        echo "
+        <td>" . $word['broj_slova'] . "</td>
+        ";
+        echo "
+        <td>" . $word['broj_suglasnika'] . "</td>
+        ";
+        echo "
+        <td>" . $word['broj_samoglasnika'] . "</td>
+        ";
+        echo "</tr>";
+        }
+        }
+        ?>
+
+    </table>
+</div>
+</body>
+</html>
