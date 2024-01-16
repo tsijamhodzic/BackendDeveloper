@@ -2,3 +2,8 @@
 /php/src/project/
 /php/.idea
 /.idea
+/php
+/composer.lock
+/composer.json
+/index.php
+/vendor
